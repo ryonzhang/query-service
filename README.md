@@ -7,7 +7,7 @@ This repository serves as a convenience strategy for data engineers or potential
   * [How to Run this Project](#how-to-run-this-project)
   * [Endpoints to Query](#endpoints-to-query)
   * [Register Endpoints to Query](#register-endpoints-to-query)
-  * [Retrieve the path list](#retrieve-the-path-list)
+  * [Retrieve the Path List](#retrieve-the-path-list)
   * [Collision Detection](#collision-detection)
   * [Caution and Comment](#caution-and-comment)
   

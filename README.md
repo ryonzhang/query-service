@@ -154,7 +154,7 @@ We may need to list all the registered paths by calling `GET http://localhost:50
 Response:
 ```json
 {
-    "ussd_session/<id>": "SELECT * FROM bsnl.ussd_sessions LIMIT <id>;",
+    "ussd_session/<number>": "SELECT * FROM bsnl.ussd_sessions LIMIT <number>;",
     "exposure/bsnl/hour": "SELECT EXTRACT(HOUR FROM created_at) AS match,COUNT(*) redshift_count,SUM(amount) redshift_amount FROM bsnl.bsnl_lend_loans WHERE paid_at IS NULL AND due_at>GETDATE() GROUP BY match;"
 }
 ```

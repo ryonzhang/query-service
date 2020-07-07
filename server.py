@@ -20,7 +20,7 @@ def query():
 @app.route('/register')
 def register():
     conflict_paths_set = conflict_paths(path_query_map.keys(),request.json['path'])
-    if not conflict_paths(path_query_map.keys(),request.json['path']):
+    if not conflict_paths_set:
         path_query_map[request.json['path']]=request.json['query']
         return 'ok'
     return 'conflict with path(s) '+ str(conflict_paths_set)

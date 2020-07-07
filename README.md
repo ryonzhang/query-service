@@ -108,6 +108,7 @@ Response:
 As a shortcut to retrieve certain information as the conventional endpoints, we don't want to pass in query everytime we need it. We can register the endpoint to certain endpoint for later recall.
 
 For example, if we want to attach an endpoint for query `SELECT EXTRACT(HOUR FROM created_at) AS match,COUNT(*) redshift_count,SUM(amount) redshift_amount FROM bsnl.bsnl_lend_loans WHERE paid_at IS NULL AND due_at>GETDATE() GROUP BY match` to endpoint `exposure/bsnl/hour`
+
 `GET http://localhost:5000/register`
 ```json
 {
@@ -121,6 +122,7 @@ Once registered, you can ping `GET http://localhost:5000/path/exposure/bsnl/hour
 
 Sometimes, we need to generalise certain path like to retrieve the information by passing the user_id in the path, to resolve this, wildcards can be registered in the paths like below:
 For example, if we want to retrieve certain number of ussd_sessions based on the params in the path, we can register the path like below:
+
 `GET http://localhost:5000/register`
 ```json
 {

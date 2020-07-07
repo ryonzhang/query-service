@@ -121,6 +121,7 @@ If there is a clash with exising paths registered, it will return `conflict with
 Once registered, you can ping `GET http://localhost:5000/path/exposure/bsnl/hour` which generates the same results as you put the query in the body.
 
 Sometimes, we need to generalise certain path like to retrieve the information by passing the user_id in the path, to resolve this, wildcards can be registered in the paths like below:
+
 For example, if we want to retrieve certain number of ussd_sessions based on the params in the path, we can register the path like below:
 
 `GET http://localhost:5000/register`
